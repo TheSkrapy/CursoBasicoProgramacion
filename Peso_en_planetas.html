@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetas</title>
+</head>
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en otros planetas</p>
+
+    <script>
+        
+        var G_Tierra=9.8;
+        var G_Marte=3.7;
+        var G_Jupiter=24.8;
+        var G_Saturno=10.4;
+        var G_Venus_Urano=8.8;
+        var G_Neptuno=11.15;
+        var G_Mercurio=3.7;
+        var Peso_Final;
+        var Nombre;
+        var control=1;
+        
+    
+        var usuario=prompt("Cual es tu peso");
+        var Peso=parseInt(usuario);
+    while(control==1){
+        var Planeta=parseInt(prompt("Elige tu planeta\n 1.-Marte 2.-Jupiter 3.-Saturno 4.-Venus 5.-Urano 6.-Neptuno 7.-Mercurio"));
+        if (Planeta>1 && Planeta<7){
+         if(Planeta==1){
+            Peso_Final=Peso*G_Marte/G_Tierra; 
+            Nombre="Marte";
+            control++;
+         }
+          else if(Planeta==2){
+            Peso_Final=Peso*G_Jupiter/G_Tierra;
+            Nombre="Jupiter";
+            control++;
+         }
+         else if(Planeta==3){
+            Peso_Final=Peso*G_Saturno/G_Tierra;
+            Nombre="Saturno";
+            control++;
+         }
+         else if(Planeta==4){
+            Peso_Final=Peso*G_Venus_Urano/G_Tierra;
+            Nombre="Venus";
+            control++;
+         }
+        else if(Planeta==5){
+            Peso_Final=Peso*G_Venus_Urano/G_Tierra;
+            Nombre="Urano";
+            control++;
+        }
+        else if(Planeta==6){
+            Peso_Final=Peso*G_Neptuno/G_Tierra;
+            Nombre="Neptuno"
+            control++;
+        }
+        else if(Planeta==7){
+            Peso_Final=Peso*G_Mercurio/G_Tierra;
+            Nombre="Mercurio"
+            control++;
+        }
+        }  
+        else if(Planeta<1 || Planeta>7){
+            alert("Ingrese un planeta valido");
+        } 
+        else{
+            alert("Ingrese un dato valido");
+        }
+    }
+       
+        Peso_Final=parseInt(Peso_Final);
+        document.write("Tu peso en "+Nombre+" es <strong>"+Peso_Final+" kilos</strong>");
+    </script>
+
+</body>
+</html>
